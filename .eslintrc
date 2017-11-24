@@ -1,0 +1,7 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "newline-per-chained-call": 0,
+    "arrow-body-style": ["error", "always"]
+  }
+}
