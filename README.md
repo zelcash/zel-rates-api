@@ -18,3 +18,14 @@ npm start
 
 After the service has been started, you should be able to browse to it on port 3333.
 Example: http://localhost:3333/rates
+
+## Docker
+To build the docker image run with command:
+```
+docker build -t btcz/btcz-rates-api .
+```
+
+Then run the docker image with command:
+```
+docker run -d --restart always -p 3333:3333 --name btcz-rates-api btcz/btcz-rates-api
+```
