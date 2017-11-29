@@ -13,7 +13,7 @@ const btczRates = {
 
       bitpayData.forEach((value) => {
         const exchangeRate = btczBtcExchangeRate * value.rate;
-        rates.push({ code: value.code, value: value.name, rate: exchangeRate });
+        rates.push({ code: value.code, name: value.name, rate: exchangeRate });
       });
 
       return rates;
