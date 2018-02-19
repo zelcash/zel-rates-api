@@ -1,5 +1,5 @@
-# btcz-rates-api
-A Restful API that displays current BTCZ exchange Rates
+# zel-rates-api
+A Restful API that displays current ZEL exchange Rates
 
 ## Requirements
 Requires node version 6.0 and above
@@ -22,10 +22,10 @@ Example: http://localhost:3333/rates
 ## Docker
 To build the docker image run with command:
 ```
-docker build -t btcz/btcz-rates-api .
+docker build -t zel/zel-rates-api .
 ```
 
 Then run the docker image with command:
 ```
-docker run -d --restart always -p 3333:3333 --name btcz-rates-api btcz/btcz-rates-api
+docker run -d --restart always -p 3333:3333 --name zel-rates-api zel/zel-rates-api
 ```

@@ -1,14 +1,14 @@
 {
-  "name": "btcz-rates",
+  "name": "zel-rates",
   "version": "1.0.0",
-  "description": "Service that supplies BTCZ rate conversion to other curriences",
+  "description": "Service that supplies ZEL rate conversion to other curriences",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
     "test": "echo 'No tests have been implemented' && exit 1",
     "lint": "eslint src/"
   },
-  "author": "BitcoinZ Community",
+  "author": "Zelcash Foundation",
   "license": "MIT",
   "dependencies": {
     "apicache": "^1.1.0",

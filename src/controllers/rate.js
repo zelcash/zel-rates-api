@@ -1,9 +1,9 @@
-const btczRates = require('../services/btczRates');
+const zelRates = require('../services/zelRates');
 const log = require('../lib/log');
 
 exports.list = (req, res, next) => {
-  log.debug('Pulling BTCZ Rate information from APIs');
-  btczRates.getAll().then((rates) => {
+  log.debug('Pulling ZEL Rate information from APIs');
+  zelRates.getAll().then((rates) => {
     res.json(rates);
   }).catch(next);
 };

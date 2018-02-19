@@ -1,6 +1,6 @@
 const request = require('request-promise-native');
 
-const btczRates = {
+const zelRates = {
   getAll() {
     return Promise.all([
       request({ uri: 'https://api.coinmarketcap.com/v1/ticker/bitcoinz/', json: true }),
@@ -8,11 +8,11 @@ const btczRates = {
     ]).then((results) => {
       const cmcData = results[0]; // results from coinmarketcap
       const bitpayData = results[1]; // results from bitpay
-      const btczBtcExchangeRate = cmcData[0].price_btc;
+      const zelBtcExchangeRate = cmcData[0].price_btc;
       const rates = [];
 
       bitpayData.forEach((value) => {
-        const exchangeRate = btczBtcExchangeRate * value.rate;
+        const exchangeRate = zelBtcExchangeRate * value.rate;
         rates.push({ code: value.code, name: value.name, rate: exchangeRate });
       });
 
@@ -21,4 +21,4 @@ const btczRates = {
   },
 };
 
-module.exports = btczRates;
+module.exports = zelRates;
