@@ -3,12 +3,12 @@ const request = require('request-promise-native');
 const zelRates = {
   getAll() {
     return Promise.all([
-      request({ uri: 'https://api.coinmarketcap.com/v1/ticker/bitcoinz/', json: true }),
+      request({ uri: 'https://stocks.exchange/api2/ticker', json: true }),
       request({ uri: 'https://bitpay.com/api/rates', json: true }),
     ]).then((results) => {
-      const cmcData = results[0]; // results from coinmarketcap
+      const cmcData = results[0]; // results from stock exchange
       const bitpayData = results[1]; // results from bitpay
-      const zelBtcExchangeRate = cmcData[0].price_btc;
+      const zelBtcExchangeRate = cmcData[204].last;
       const rates = [];
 
       bitpayData.forEach((value) => {
