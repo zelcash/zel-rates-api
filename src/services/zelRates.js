@@ -8,7 +8,7 @@ const zelRates = {
     ]).then((results) => {
       const cmcData = results[0]; // results from stock exchange
       const bitpayData = results[1]; // results from bitpay
-      const zelBtcExchangeRate = cmcData[204].last;
+      const zelBtcExchangeRate = cmcData[181].last;
       const rates = [];
 
       bitpayData.forEach((value) => {
